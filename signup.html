@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up — Stackly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="animation.css">
+</head>
+
+<body>
+
+    <div class="auth-wrap">
+        <!-- VISUAL SIDE -->
+        <div class="auth-visual">
+            <a href="./home.html" class="logo" style="position:relative;z-index:1;">Stackly</a>
+            <div class="auth-visual-img load-in d1">
+                <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=700&q=80" alt="Students learning together">
+            </div>
+            <div class="auth-visual-quote load-in d2">
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p>"I never thought online learning could feel this personal. Best decision for my career."</p>
+                <div class="testi-person">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="">
+                    <div><strong>Ava Chen</strong><span>Frontend Developer</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORM SIDE -->
+        <div class="auth-side">
+            <div class="auth-box load-in">
+                <a href="./home.html" class="logo">Stackly</a>
+                <h2>Create Your Account</h2>
+                <p class="subhead">Start learning in less than a minute. No credit card required.</p>
+
+                <div class="form-banner"></div>
+
+                <form class="auth-form" id="signupForm" novalidate>
+
+                    <!-- ROLE SELECT -->
+                    <div class="form-group">
+                        <label>I am signing up as</label>
+                        <div class="role-select">
+                            <label class="role-option">
+                                <input type="radio" name="role" value="user" checked>
+                                <span class="role-card">
+                                    <i class="fa-regular fa-user"></i>
+                                    <span><strong>Student</strong><span>Learn courses</span></span>
+                                </span>
+                            </label>
+                            <label class="role-option">
+                                <input type="radio" name="role" value="admin">
+                                <span class="role-card">
+                                    <i class="fa-solid fa-user-shield"></i>
+                                    <span><strong>Admin</strong><span>Manage platform</span></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-row" style="margin-bottom:0;">
+                        <div class="form-group">
+                            <label for="signupName">Full Name</label>
+                            <div class="input-icon-wrap">
+                                <i class="fa-regular fa-user"></i>
+                                <input id="signupName" type="text" placeholder="Jordan Lee" required>
+                            </div>
+                            <span class="error-msg"><i class="fa-solid fa-circle-exclamation"></i><span>Please enter your full name.</span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email Address</label>
+                            <div class="input-icon-wrap">
+                                <i class="fa-regular fa-envelope"></i>
+                                <input id="signupEmail" type="email" placeholder="you@email.com" required>
+                            </div>
+                            <span class="error-msg"><i class="fa-solid fa-circle-exclamation"></i><span>Enter a valid email address.</span></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <div class="input-icon-wrap">
+                            <i class="fa-solid fa-lock"></i>
+                            <input id="signupPassword" type="password" placeholder="Create a password" required minlength="8">
+                            <i class="fa-solid fa-eye toggle-pass"></i>
+                        </div>
+                        <div class="pass-strength"><span></span><span></span><span></span><span></span></div>
+                        <span class="error-msg"><i class="fa-solid fa-circle-exclamation"></i><span>Password must be at least 8 characters.</span></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupConfirmPassword">Confirm Password</label>
+                        <div class="input-icon-wrap">
+                            <i class="fa-solid fa-lock"></i>
+                            <input id="signupConfirmPassword" type="password" placeholder="Re-enter your password" required>
+                            <i class="fa-solid fa-eye toggle-pass"></i>
+                        </div>
+                        <span class="error-msg"><i class="fa-solid fa-circle-exclamation"></i><span>Passwords do not match.</span></span>
+                    </div>
+
+                    <label class="terms-check">
+                        <input type="checkbox" id="signupTerms" required>
+                        I agree to Stackly's <a href="./404.html">Terms of Service</a> and <a href="./404.html">Privacy Policy</a>
+                        <span class="error-msg"><i class="fa-solid fa-circle-exclamation"></i><span>Passwords do not match.</span></span>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary">Create Account <i class="fa-solid fa-arrow-up-right"></i></button>
+                </form>
+
+                <div class="auth-divider">or sign up with</div>
+
+                <div class="social-auth">
+                    <button class="social-btn"><i class="fa-brands fa-google"></i> Google</button>
+                    <button class="social-btn"><i class="fa-brands fa-apple"></i> Apple</button>
+                </div>
+
+                <p class="auth-switch">Already have an account? <a href="./login.html">Log in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="animation.js"></script>
+    <script>
+        const signupForm = document.getElementById("signupForm");
+
+const nameInput = document.getElementById("signupName");
+const emailInput = document.getElementById("signupEmail");
+const passwordInput = document.getElementById("signupPassword");
+const confirmPasswordInput = document.getElementById("signupConfirmPassword");
+const termsInput = document.getElementById("signupTerms");
+
+signupForm.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    clearErrors();
+
+    let valid = true;
+
+    const namePattern = /^[A-Za-z\s]+$/;
+const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in)$/i;
+    // Full Name
+    if (nameInput.value.trim() === "") {
+        showError(nameInput, "Please enter your full name.");
+        valid = false;
+    }
+    else if (!namePattern.test(nameInput.value.trim())) {
+        showError(nameInput, "Name should contain only letters.");
+        valid = false;
+    }
+
+    // Email
+    if (emailInput.value.trim() === "") {
+        showError(emailInput, "Email is required.");
+        valid = false;
+    }
+    else if (!emailPattern.test(emailInput.value.trim())) {
+        showError(emailInput, "Email must end with .com or .in.");
+        valid = false;
+    }
+
+    // Password
+    if (passwordInput.value.trim() === "") {
+        showError(passwordInput, "Password is required.");
+        valid = false;
+    }
+    else if (passwordInput.value.length < 8) {
+        showError(passwordInput, "Password must be at least 8 characters.");
+        valid = false;
+    }
+
+    // Confirm Password
+    if (confirmPasswordInput.value.trim() === "") {
+        showError(confirmPasswordInput, "Please confirm your password.");
+        valid = false;
+    }
+    else if (passwordInput.value !== confirmPasswordInput.value) {
+        showError(confirmPasswordInput, "Passwords do not match.");
+        valid = false;
+    }
+
+    // Terms
+    if (!termsInput.checked) {
+        showError("Please accept the Terms & Privacy Policy.");
+        valid = false;
+    }
+
+    if (valid) {
+
+        // Save email
+        localStorage.setItem("userEmail", emailInput.value.trim());
+
+        // Selected Role
+        const role = document.querySelector('input[name="role"]:checked').value;
+
+       window.location.href="login.html"
+    }
+
+});
+
+function showError(input, message) {
+
+    input.classList.add("error");
+
+    const error = input.closest(".form-group").querySelector(".error-msg");
+
+    error.style.display = "flex";
+    error.querySelector("span").textContent = message;
+
+}
+
+function clearErrors() {
+
+    document.querySelectorAll(".error-msg").forEach(error => {
+        error.style.display = "none";
+    });
+
+    document.querySelectorAll("#signupForm input").forEach(input => {
+        input.classList.remove("error");
+    });
+
+}
+    </script>
+</body>
+
+</html>

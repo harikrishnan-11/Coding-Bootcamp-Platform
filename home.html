@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly — Build Your Skills Anytime, Anywhere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="./home.html" class="logo">Stackly</a>
+            <ul class="nav-links">
+                <li><a href="./home.html" class="active">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./courses.html">Courses</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="./login.html" class="btn btn-outline" style="padding:12px 22px;">Login</a>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" ><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+        <div class="mobile-panel" id="mobilePanel">
+            
+            <a href="./home.html">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./courses.html">Courses</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./contact.html">Contact Us</a>
+            <a href="./login.html">Login</a>
+            
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container hero-inner">
+            <div class="hero-copy">
+                <span class="eyebrow load-in">Elearning Platform</span>
+                <h1 class="load-in d1"><span class="line1">Build Your Skills</span><br>Anytime, Anywhere</h1>
+                <p class="load-in d2">Anytime access to skills that take you further. Unlock your full potential.</p>
+                <div class="hero-cta load-in d3">
+                    <a href="./courses.html" class="btn btn-primary">Start Learning <i class="fa-solid fa-arrow-up-right"></i></a>
+                    <a href="./404.html" class="play-cta"><span class="play-circle"><i class="fa-solid fa-play"></i></span> How it Work</a>
+                </div>
+            </div>
+            <div class="hero-figure">
+                <svg class="arrow-deco" viewBox="0 0 260 300" fill="none">
+                    <path d="M20 20 C 40 120, 200 100, 180 220 C 170 260, 100 270, 60 250" stroke="#7c3aed"
+                        stroke-width="3" stroke-linecap="round" />
+                    <path d="M40 210 L58 252 L100 236" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" fill="none" />
+                </svg>
+                <div class="hero-img-wrap">
+                    <div class="ring"></div>
+                    <img src="./src/images/Untitled design (2)-compressed_11zon.webp" alt="Learner" >
+                    <div class="float-badge b1"><i class="fa-solid fa-headset"></i></div>
+                    <div class="float-badge b2"><i class="fa-solid fa-video"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="container trusted">
+            <p>We are trusted by</p>
+            <div class="logo-row">
+                <span><i class="fa-solid fa-atom"></i> Logoipsum</span>
+                <span><i class="fa-solid fa-wave-square"></i> Logoipsum</span>
+                <span><i class="fa-solid fa-circle-notch"></i> Logoipsum</span>
+                <span><i class="fa-solid fa-gear"></i> Logoipsum</span>
+                <span><i class="fa-solid fa-leaf"></i> Logoipsum</span>
+                <span><i class="fa-solid fa-envelope"></i> Logoipsum</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="about" class="reveal">
+        <div class="container why">
+            <div class="why-img">
+                <img src="./src/images/image-3-compressed-1.webp" alt="Student">
+                <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.9 <small>770k+ Reviews</small></div>
+            </div>
+            <div>
+                <span class="eyebrow">Why Choose Us</span>
+                <h2>Why Stackly Work<br>for You <span class="text-grad">Effectivelly</span></h2>
+                <div class="why-feats">
+                    <div class="feat-item">
+                        <div class="feat-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <h4>Learn at Your Own Pace</h4>
+                            <p>Access a wide range of courses anytime, anywhere. Whether you're an early bird or night
+                                owl, your learning fits your schedule.</p>
+                        </div>
+                    </div>
+                    <div class="feat-item">
+                        <div class="feat-icon"><i class="fa-solid fa-award"></i></div>
+                        <div>
+                            <h4>Curated Courses by Experts</h4>
+                            <p>Every course is created or reviewed by professionals, so you only get relevant,
+                                high-quality learning materials.</p>
+                        </div>
+                    </div>
+                    <div class="feat-item">
+                        <div class="feat-icon"><i class="fa-solid fa-display"></i></div>
+                        <div>
+                            <h4>Seamless Across All Devices</h4>
+                            <p>From desktop to mobile, enjoy a smooth learning experience with a beautifully crafted
+                                interface — optimized for focus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES -->
+    <section id="courses" class="reveal">
+        <div class="container">
+            <div class="courses-head">
+                <div class="section-head">
+                    <span class="eyebrow">Our Courses</span>
+                    <h2>Explore our Best <span class="text-grad">Courses</span></h2>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search course...">
+                    <button class="btn btn-primary">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <div class="course-grid" id="courseGrid">
+                <div class="course-card">
+                    <div class="course-thumb"><img src="./src/images/image-7-compressed.webp" alt=""></div>
+                    <div class="course-body">
+                        <div class="course-cat">UI/UX Design</div>
+                        <h3>User Experience Design Fundamentals</h3>
+                        <div class="course-instructor">
+                            <div class="instructor">Sarah Mitchell</div>
+                            <div class="sessions">16 Sessions</div>
+                        </div>
+                        <div class="course-foot"><div class="price">$19.00 <del>$26.00</del></div><a href="./courses.html" class="join-btn">Join Course</a></div>
+                    </div>
+                </div>
+
+                <div class="course-card featured">
+                    <div class="course-thumb"><img src="./src/images/image-4-compressed-1.webp" alt=""></div>
+                    <div class="course-body">
+                        <div class="course-cat">Graphic Design</div>
+                        <h3>Introduction to Graphic Design</h3>
+                        <div class="course-instructor">
+                            <div class="instructor">Liam Garcia</div>
+                            <div class="sessions">12 Sessions</div>
+                        </div>
+                        <div class="course-foot"><div class="price">$30.00 <del>$35.00</del></div><a href="./courses.html" class="join-btn">Join Course</a></div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-thumb"><img src="./src/images/image-6-compressed-1.webp" alt=""></div>
+                    <div class="course-body">
+                        <div class="course-cat">Web Development</div>
+                        <h3>Frontend Web Development Bootcamp</h3>
+                        <div class="course-instructor">
+                            <div class="instructor"> Emma Wilson</div>
+                            <div class="sessions">20 Sessions</div>
+                        </div>
+                        <div class="course-foot"><div class="price">$30.00 <del>$45.00</del></div><a href="./courses.html" class="join-btn">Join Course</a></div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-thumb"><img src="./src/images/image-8-compressed.webp" alt=""></div>
+                    <div class="course-body">
+                        <div class="course-cat">Data Science</div>
+                        <h3>Beginner's Guide to Data Analysis with SQL</h3>
+                        <div class="course-instructor">
+                            <div class="instructor">Noah Robinson</div>
+                            <div class="sessions">20 Sessions</div>
+                        </div>
+                        <div class="course-foot"><div class="price">$50.00 <del>$65.00</del></div><a href="./courses.html" class="join-btn">Join Course</a></div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-thumb"><img src="./src/images/image-10-compressed.webp" alt=""></div>
+                    <div class="course-body">
+                        <div class="course-cat">Mobile Development</div>
+                        <h3>Apple App Development Basics</h3>
+                        <div class="course-instructor">
+                            <div class="instructor">Olivia Martinez</div>
+                            <div class="sessions">20 Sessions</div>
+                        </div>
+                        <div class="course-foot"><div class="price">$40.00 <del>$55.00</del></div><a href="./courses.html" class="join-btn">Join Course</a></div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-thumb"><img src="./src/images/image-12-compressed.webp" alt=""></div>
+                    <div class="course-body">
+                        <div class="course-cat">Graphic Design</div>
+                        <h3>Graphic Design Essentials: Craft Visual Stories</h3>
+                        <div class="course-instructor">
+                            <div class="instructor"> Daniel Rivera</div>
+                            <div class="sessions">20 Sessions</div>
+                        </div>
+                        <div class="course-foot"><div class="price">$20.00 <del>$45.00</del></div><a href="./courses.html" class="join-btn">Join Course</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="browse-wrap"><a href="./courses.html" class="btn btn-outline">Browse All Courses <i class="fa-solid fa-arrow-up-right"></i></a></div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how reveal">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">How It Work</span>
+                <h2>Easy <span class="text-grad">Courses</span> to Smarter Learning</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon"><i class="fa-solid fa-user-plus"></i><span class="step-num">01</span></div>
+                    <h4>Sign Up for Free</h4>
+                    <p>Create your account in seconds no hidden fees or setup required.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon"><i class="fa-solid fa-hand-pointer"></i><span class="step-num">02</span></div>
+                    <h4>Pick Your Course</h4>
+                    <p>Browse top-quality courses in various categories tailored to your goals.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon"><i class="fa-solid fa-people-arrows"></i><span class="step-num">03</span></div>
+                    <h4>Learn at Your Own Pace</h4>
+                    <p>Access lessons anytime, anywhere. Enjoy flexible learning with videos, quizzes, and assignments.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon"><i class="fa-solid fa-certificate"></i><span class="step-num">04</span></div>
+                    <h4>Earn Your Certificate</h4>
+                    <p>Complete the course and receive an official digital certificate to boost your resume and career.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section id="pages" class="reveal">
+        <div class="container">
+            <div class="cat-top">
+                <div class="section-head">
+                    <span class="eyebrow">Categories</span>
+                    <h2>Choose Your Favourite<br>Course from Top <span class="text-grad">Categories</span></h2>
+                </div>
+                <div>
+                    <p class="side-text">Discover a variety of in-demand learning categories designed to elevate your skills and boost your career.</p>
+                    <a href="./courses.html" class="btn btn-primary">Browse All Categories <i class="fa-solid fa-arrow-up-right"></i></a>
+                </div>
+            </div>
+
+            <div class="cat-grid">
+                <div class="cat-card">
+                    <div class="cat-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <div><h4>UI/UX Design</h4><p>Master the principles of user-centered design...</p></div>
+                    <a href="./courses.html" class="show-more">Show More <i class="fa-solid fa-arrow-up-right"></i></a>
+                    <span class="cat-num">1.</span>
+                </div>
+                <div class="cat-card active">
+                    <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
+                    <div><h4>Web Development</h4><p>Build responsive websites and modern web...</p></div>
+                    <a href="./courses.html" class="show-more">Show More <i class="fa-solid fa-arrow-up-right"></i></a>
+                    <span class="cat-num">2.</span>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <div><h4>Mobile Development</h4><p>Learn how to create stunning mobile...</p></div>
+                    <a href="./courses.html" class="show-more">Show More <i class="fa-solid fa-arrow-up-right"></i></a>
+                    <span class="cat-num">3.</span>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                    <div><h4>Digital Marketing</h4><p>Grow businesses with effective marketing...</p></div>
+                    <a href="./courses.html" class="show-more">Show More <i class="fa-solid fa-arrow-up-right"></i></a>
+                    <span class="cat-num">4.</span>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon"><i class="fa-solid fa-robot"></i></div>
+                    <div><h4>Data &amp; Artificial Intelegencies</h4><p>Understand data analytics, machine learning, and Ai...</p></div>
+                    <a href="./courses.html" class="show-more">Show More <i class="fa-solid fa-arrow-up-right"></i></a>
+                    <span class="cat-num">5.</span>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon"><i class="fa-solid fa-palette"></i></div>
+                    <div><h4>Creative &amp; Multimedia</h4><p>Unleash your creativity with courses in graphic...</p></div>
+                    <a href="./courses.html" class="show-more">Show More <i class="fa-solid fa-arrow-up-right"></i></a>
+                    <span class="cat-num">6.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="reveal">
+        <div class="cat-cta" style="margin-bottom: 90px;">
+            <h2>Choose What You Love.</h2>
+        </div>
+        <div class="container testi">
+            <div>
+                <div class="testi-head">
+                    <h2>What Our Learners Are<br><span class="text-grad">Saying</span></h2>
+                    <div class="testi-arrow"><i class="fa-solid fa-arrow-up-right"></i></div>
+                </div>
+                <div class="testi-img">
+                    <img src="./src/images/image-5-compressed.webp" alt="Learner">
+                </div>
+            </div>
+            <div class="testi-list">
+                <div class="testi-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"I never thought online learning could feel this personal. Stackly helped me switch careers with confidence!"</p>
+                    <div class="testi-person"><i class="fa-regular fa-circle-user"></i><div><strong>Sophia Thompson</strong><span>UI/UX Designer</span></div></div>
+                    <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                </div>
+                <div class="testi-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"I never thought online learning could feel this personal. Stackly helped me switch careers with confidence!"</p>
+                    <div class="testi-person"><i class="fa-regular fa-circle-user"></i><div><strong>Liam Garcia</strong><span>UI/UX Designer</span></div></div>
+                    <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                </div>
+                <div class="testi-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"I never thought online learning could feel this personal. Stackly helped me switch careers with confidence!"</p>
+                    <div class="testi-person"><i class="fa-regular fa-circle-user"></i><div><strong>Ava Chen</strong><span>Frontend Developer</span></div></div>
+                    <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing reveal">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Choose Package</span>
+                <h2>Boost Your Skills<br>Expand <span class="text-grad">Your Mind</span></h2>
+            </div>
+            <div class="price-grid">
+                <div class="price-card">
+                    <span class="save-badge">Save 15%</span>
+                    <div class="plan-name">Starter</div>
+                    <p class="tag">Perfect for Casual Learners</p>
+                    <div class="amount">$29<span>/ Month</span></div>
+                    <ul class="plan-feats">
+                        <li><i class="fa-solid fa-circle-check"></i> Access to selected beginner</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Standard digital certificates</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Community support</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Up to 3 active courses</li>
+                        <li class="off"><i class="fa-regular fa-circle"></i> Custom Automations</li>
+                        <li class="off"><i class="fa-regular fa-circle"></i> Voice Assistant Integration</li>
+                    </ul>
+                    <a href="./signup.html" class="btn btn-primary">Choose Package <i class="fa-solid fa-arrow-up-right"></i></a>
+                </div>
+
+                <div class="price-card expert">
+                    <span class="save-badge">Save 45%</span>
+                    <div class="plan-name">Expert</div>
+                    <p class="tag">For Career-Driven Professionals</p>
+                    <div class="amount">$69<span>/ Month</span></div>
+                    <ul class="plan-feats">
+                        <li><i class="fa-solid fa-circle-check"></i> Access to selected beginner</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Standard digital certificates</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Community support</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Up to 3 active courses</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Personalized learning paths</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Access to exclusive webinars</li>
+                    </ul>
+                    <a href="./signup.html" class="btn btn-white">Choose Package <i class="fa-solid fa-arrow-up-right"></i></a>
+                </div>
+
+                <div class="price-card">
+                    <span class="save-badge">Save 35%</span>
+                    <div class="plan-name">Pro</div>
+                    <p class="tag">For Consistent Learners</p>
+                    <div class="amount">$49<span>/ Month</span></div>
+                    <ul class="plan-feats">
+                        <li><i class="fa-solid fa-circle-check"></i> Access to selected beginner</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Standard digital certificates</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Community support</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Up to 3 active courses</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Monthly progress reports</li>
+                        <li class="off"><i class="fa-regular fa-circle"></i> Voice Assistant Integration</li>
+                    </ul>
+                    <a href="./signup.html" class="btn btn-primary">Choose Package <i class="fa-solid fa-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="reveal">
+        <div class="container faq">
+            <div>
+                <span class="eyebrow">Need Help</span>
+                <h2>Frequently Asked<br><span class="text-grad">Questions</span></h2>
+                <p style="color:var(--gray-400);margin-top:18px;">We're here to make learning easy. Explore our FAQs to quickly find the information you need about features, courses, access, and more.</p>
+                <div class="faq-help-card">
+                    <h4>Still have a question?</h4>
+                    <p>We're here to help you. If you have any questions or need more information, feel free to reach out!</p>
+                    <a href="./contact.html" class="btn btn-outline">Ask a Question <i class="fa-solid fa-arrow-up-right"></i></a>
+                </div>
+            </div>
+
+            <div class="faq-list" id="faqList">
+                <div class="faq-item open">
+                    <div class="faq-q">What is Stackly? <i class="fa-solid fa-circle-minus"></i></div>
+                    <div class="faq-a"><div class="faq-a-inner">Stackly is an online learning platform that lets you take courses anytime, anywhere. Learn new skills, level up your career, or explore new interests on your schedule.</div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Who can use Stackly? <i class="fa-solid fa-circle-plus"></i></div>
+                    <div class="faq-a"><div class="faq-a-inner">Anyone looking to build new skills — students, professionals, and career switchers alike are welcome on Stackly.</div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What types of courses are available? <i class="fa-solid fa-circle-plus"></i></div>
+                    <div class="faq-a"><div class="faq-a-inner">We offer courses across design, development, marketing, data, and creative fields, taught by industry professionals.</div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Are the courses beginner-friendly? <i class="fa-solid fa-circle-plus"></i></div>
+                    <div class="faq-a"><div class="faq-a-inner">Yes, most courses start from the fundamentals and progress at a pace suited for beginners.</div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Can I access Stackly from my phone or tablet? <i class="fa-solid fa-circle-plus"></i></div>
+                    <div class="faq-a"><div class="faq-a-inner">Absolutely. Stackly is fully responsive and works seamlessly across desktop, tablet, and mobile devices.</div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Do I need to download anything? <i class="fa-solid fa-circle-plus"></i></div>
+                    <div class="faq-a"><div class="faq-a-inner">No downloads needed — Stackly runs entirely in your browser.</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="reveal">
+        <div class="container blog">
+            <div class="section-head">
+                <span class="eyebrow">Blog &amp; Article</span>
+                <h2>Explore Our Latest <span class="text-grad">Blogs &amp; Articles</span></h2>
+                <p>Get fresh ideas, practical guides, and motivation to keep you moving forward in your learning journey.</p>
+            </div>
+            <div class="newsletter">
+                <input type="email" placeholder="Enter your email..">
+                <button class="btn btn-primary">Subscribe</button>
+            </div>
+
+            <div class="blog-grid">
+                <div class="blog-feature">
+                    <div class="img">
+                        <img src="./src/images/image-2-compressed-1.webp" alt="">
+                        <div class="blog-tags"><span class="tag-pill">Online Learning</span><span class="tag-pill">Study Habits</span></div>
+                    </div>
+                    <div class="body">
+                        <div class="meta-pills"><span class="meta-pill"><i class="fa-regular fa-user"></i> Sarah Mitchell</span><span class="meta-pill"><i class="fa-regular fa-calendar"></i> May 08, 2026</span></div>
+                        <h3>5 Simple Ways to Stay Motivated While Learning Online</h3>
+                        <p>Discover easy tips to keep your motivation high during your online learning journey, even when...</p>
+                        <a href="./blog.html" class="read" style="display:inline-flex;gap:6px;align-items:center;margin-top:16px;font-weight:700;font-size:13px;text-decoration:underline;">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-side">
+                    <div class="blog-mini">
+                        <div class="img"><img src="./src/images/image-3-compressed-1.webp" alt=""></div>
+                        <div class="body">
+                            <span class="meta-pill" style="width:fit-content;margin-bottom:10px;"><i class="fa-regular fa-calendar"></i> May 08, 2026</span>
+                            <h4>How to Create Effective Study Schedules for Online Courses</h4>
+                            <a href="./blog.html" class="read">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-mini">
+                        <div class="img"><img src="./src/images/Untitled design (2)-compressed_11zon.webp" alt=""></div>
+                        <div class="body">
+                            <span class="meta-pill" style="width:fit-content;margin-bottom:10px;"><i class="fa-regular fa-calendar"></i> May 08, 2026</span>
+                            <h4>Top 10 Online Resources for Self-Directed Learners</h4>
+                            <a href="./blog.html" class="read">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-mini">
+                        <div class="img"><img src="./src/images/image-5-compressed.webp" alt=""></div>
+                        <div class="body">
+                            <span class="meta-pill" style="width:fit-content;margin-bottom:10px;"><i class="fa-regular fa-calendar"></i> May 08, 2026</span>
+                            <h4>Balancing Work and Study: Tips for Busy Professionals</h4>
+                            <a href="./blog.html" class="read">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta reveal" id="get-started">
+        <div class="container" style="position:relative;">
+            <span class="world-dot" style="top:-30px;left:5%;">USA</span>
+            <span class="world-dot" style="top:-10px;right:8%;">China</span>
+            <span class="world-dot" style="top:40px;right:2%;">Qatar</span>
+            <span class="world-dot" style="bottom:10px;right:6%;">Singapore</span>
+            <span class="world-dot" style="bottom:-10px;left:8%;">Brasil</span>
+            <span class="eyebrow">Get Started</span>
+            <h2>Ready to Transform <span class="text-grad">Your Skills</span> into a Career?</h2>
+            <p>Join thousands of learners who are building better futures with flexible learning. Take your first step today and unlock real growth through knowledge.</p>
+            <div class="cta-btns">
+                <a href="./courses.html" class="btn btn-primary">Start Learning Now <i class="fa-solid fa-arrow-up-right"></i></a>
+                <a href="#pricing" class="btn btn-outline">View Package <i class="fa-solid fa-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="reveal">
+        <div class="container">
+            <div class="footer-grid">
+                <div><a href="./home.html" class="logo">Stackly</a></div>
+                <div>
+                    <h5>Quick Links:</h5>
+                    <ul>
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./courses.html">Courses</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Features</h5>
+                    <ul>
+                        <li><a href="./404.html">Online Courses</a></li>
+                        <li><a href="./404.html">Interactive Lessons</a></li>
+                        <li><a href="./404.html">Expert Instructors</a></li>
+                        <li><a href="./404.html">Certification</a></li>
+                        <li><a href="./404.html">Mobile Friendly Access</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Resource</h5>
+                    <ul>
+                        <li><a href="./blog.html">Blog / Articles</a></li>
+                        <li><a href="./contact.html">Help Center (FAQ)</a></li>
+                        <li><a href="./404.html">Learning Guides</a></li>
+                        <li><a href="./404.html">Community Forum</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Social Media</h5>
+                    <ul class="social">
+                        <li><a href="./404.html"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="./404.html"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+                        <li><a href="./404.html"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="./404.html"><i class="fa-brands fa-telegram"></i> Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>Copyright © 2026 Stackly. All Rights Reserved.</span>
+                <div class="links"><a href="./404.html">Terms of Service</a><a href="./404.html">Privacy Policy</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animation.js"></script>
+    <script>
+           // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobilePanel = document.getElementById('mobilePanel');
+        mobileToggle.addEventListener('click', () => {
+            const isOpen = mobilePanel.style.display === 'flex';
+            mobilePanel.style.display = isOpen ? 'none' : 'flex';
+            mobileToggle.innerHTML = isOpen ? '<i class="fa-solid fa-bars"></i>' : '<i class="fa-solid fa-xmark"></i>';
+        });
+        document.querySelectorAll('.mobile-panel a').forEach(a => a.addEventListener('click', () => {
+            mobilePanel.style.display = 'none';
+            mobileToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }));
+
+        
+    </script>
+</body>
+
+</html>

@@ -1,9 +1,91 @@
-.reveal{
+/* ---------- SCROLL REVEAL ---------- */
+.reveal {
     opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease;
+    transform: translateY(36px);
+    transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
 }
-.reveal.active{
+.reveal.in-view {
     opacity: 1;
     transform: translateY(0);
+}
+
+.reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+.reveal-stagger.in-view > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+.reveal-stagger.in-view > *:nth-child(1) { transition-delay: .05s; }
+.reveal-stagger.in-view > *:nth-child(2) { transition-delay: .12s; }
+.reveal-stagger.in-view > *:nth-child(3) { transition-delay: .19s; }
+.reveal-stagger.in-view > *:nth-child(4) { transition-delay: .26s; }
+.reveal-stagger.in-view > *:nth-child(5) { transition-delay: .33s; }
+.reveal-stagger.in-view > *:nth-child(6) { transition-delay: .4s; }
+.reveal-stagger.in-view > *:nth-child(7) { transition-delay: .47s; }
+.reveal-stagger.in-view > *:nth-child(8) { transition-delay: .54s; }
+
+/* ---------- HERO LOAD-IN ---------- */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.load-in { animation: fadeUp .9s cubic-bezier(.16,1,.3,1) both; }
+.load-in.d1 { animation-delay: .08s; }
+.load-in.d2 { animation-delay: .16s; }
+.load-in.d3 { animation-delay: .24s; }
+.load-in.d4 { animation-delay: .32s; }
+
+/* ---------- FLOATING BADGES ---------- */
+@keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+}
+.float-badge { animation: floatY 4.5s ease-in-out infinite; }
+.float-badge.b2 { animation-delay: 1.2s; }
+
+/* ---------- COUNTER PULSE (about stats) ---------- */
+.stat-card .num { transition: transform .3s ease; }
+.stat-card:hover .num { transform: scale(1.06); }
+
+/* ---------- BACKDROP GLOW DRIFT ---------- */
+@keyframes glowDrift {
+    0%, 100% { opacity: .55; }
+    50% { opacity: .9; }
+}
+
+/* ---------- MOBILE PANEL LINKS STAGGER ---------- */
+.mobile-panel a {
+    opacity: 0;
+    transform: translateX(-16px);
+    transition: opacity .4s ease, transform .4s ease;
+}
+.mobile-panel.active a {
+    opacity: 1;
+    transform: translateX(0);
+}
+.mobile-panel.active a:nth-child(1) { transition-delay: .08s; }
+.mobile-panel.active a:nth-child(2) { transition-delay: .13s; }
+.mobile-panel.active a:nth-child(3) { transition-delay: .18s; }
+.mobile-panel.active a:nth-child(4) { transition-delay: .23s; }
+.mobile-panel.active a:nth-child(5) { transition-delay: .28s; }
+.mobile-panel.active a:nth-child(6) { transition-delay: .33s; }
+
+/* ---------- BUTTON RIPPLE-LIKE ARROW SHIFT (extends existing .btn i hover) ---------- */
+.social-btn i { transition: transform .2s ease; }
+.social-btn:hover i { transform: scale(1.1); }
+
+/* ---------- FAQ / auth toggles ---------- */
+.faq-item { transition: background .3s ease, border-color .3s ease; }
+
+/* ---------- Respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-stagger > *, .load-in, .float-badge, .page-header, .hero {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
 }

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard — Stackly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <div class="sidebar-overlay"></div>
+
+    <div class="dash-wrap">
+        <!-- SIDEBAR -->
+        <aside class="dash-sidebar">
+            <div class="dash-sidebar-head">
+                <a href="./home.html" class="logo">Stackly</a>
+                <button class="sidebar-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="dash-nav-label">Learning</div>
+            <nav class="dash-nav">
+                <a href="#" data-tab="dashboard" class="active"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                <a href="#" data-tab="mycourses"><i class="fa-solid fa-book-open"></i> My Courses</a>
+                <a href="#" data-tab="progress"><i class="fa-solid fa-chart-simple"></i> Progress</a>
+                <a href="#" data-tab="certificates"><i class="fa-solid fa-award"></i> Certificates</a>
+            </nav>
+
+            <div class="dash-nav-label">Account</div>
+            <nav class="dash-nav">
+                <a href="#" data-tab="messages"><i class="fa-regular fa-comment-dots"></i> Messages</a>
+                <a href="#" data-tab="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+
+            <div class="dash-sidebar-foot">
+                <div class="dash-user-chip">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+                    <div>
+                        <strong>Priya Sharma</strong>
+                        <span>priya.sharma@stackly.com</span>
+                    </div>
+                </div>
+                <a href="./login.html" class="dash-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="dash-main">
+            <div class="dash-topbar">
+                <div class="topbar-left">
+                    <button class="mobile-menu-btn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+                    <div>
+                        <h1 data-tab-title data-user-name="Priya">Welcome back</h1>
+                        <p data-tab-desc>Pick up where you left off and keep the streak going.</p>
+                    </div>
+                </div>
+                <div class="dash-topbar-actions">
+                    <div class="dash-search">
+                         <div class="dash-search">
+                        User:
+                    </div>
+                    </div>
+                    <div class="dash-email-chip"><i class="fa-solid fa-envelope"></i> <span id="userEmail">priya.sharma@stackly.com</span></div>
+                    
+                </div>
+            </div>
+
+            <!-- ===================== DASHBOARD TAB ===================== -->
+            <section class="tab-content active" data-tab-panel="dashboard">
+                <div class="stat-row">
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-book-open"></i></div><span class="dstat-trend">+2</span></div><div class="num">6</div><div class="lbl">Enrolled Courses</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-circle-check"></i></div><span class="dstat-trend">+1</span></div><div class="num">3</div><div class="lbl">Completed</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-clock"></i></div><span class="dstat-trend">+6h</span></div><div class="num">42h</div><div class="lbl">Hours Learned</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-award"></i></div><span class="dstat-trend">+1</span></div><div class="num">3</div><div class="lbl">Certificates</div></div>
+                </div>
+
+                <div class="dash-grid">
+                    <div class="panel">
+                        <div class="panel-head"><h3>Hours learned this week</h3><a href="./404.html">View progress</a></div>
+                        <div class="chart-box"><canvas id="chartHoursLine"></canvas></div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-head"><h3>Course status</h3></div>
+                        <div class="chart-box sm"><canvas id="chartStatusDoughnut"></canvas></div>
+                        <div class="chart-legend">
+                            <span style="--dot:#8b5cf6">Completed</span>
+                            <span style="--dot:#a78bfa">In progress</span>
+                            <span style="--dot:#3c1090">Not started</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-head"><h3>Continue learning</h3><a href="./404.html">View all courses</a></div>
+                    <div class="mini-course">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=200&q=80" alt="">
+                        <div class="info"><h4>UX Design Fundamentals</h4><div class="progress-track"><div class="fill" style="width:72%"></div></div><span class="pct">72% complete · 4 lessons left</span></div>
+                        <a href="./404.html" class="tag-btn">Resume</a>
+                    </div>
+                    <div class="mini-course">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=200&q=80" alt="">
+                        <div class="info"><h4>Advanced JavaScript</h4><div class="progress-track"><div class="fill" style="width:45%"></div></div><span class="pct">45% complete · 9 lessons left</span></div>
+                        <a href="./404.html" class="tag-btn">Resume</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== MY COURSES TAB ===================== -->
+            <section class="tab-content" data-tab-panel="mycourses">
+                <div class="stat-row cols-3">
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-book-open"></i></div></div><div class="num">6</div><div class="lbl">Enrolled</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-circle-check"></i></div></div><div class="num">3</div><div class="lbl">Completed</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-regular fa-hourglass-half"></i></div></div><div class="num">3</div><div class="lbl">In Progress</div></div>
+                </div>
+
+                <div class="panel" style="margin-bottom:20px;">
+                    <div class="panel-head"><h3>Courses by category</h3></div>
+                    <div class="chart-box"><canvas id="chartMyCoursesBar"></canvas></div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-head"><h3>All my courses</h3><a href="./404.html">Browse more</a></div>
+                    <div class="table-scroll">
+                        <table class="dash-table">
+                            <thead><tr><th>Course</th><th>Instructor</th><th>Progress</th><th>Status</th></tr></thead>
+                            <tbody>
+                                <tr><td>UX Design Fundamentals</td><td>Aisha Khan</td><td>72%</td><td><span class="status-pill pending">In Progress</span></td></tr>
+                                <tr><td>Advanced JavaScript</td><td>James Park</td><td>45%</td><td><span class="status-pill pending">In Progress</span></td></tr>
+                                <tr><td>Data Science Bootcamp</td><td>Leo Martins</td><td>20%</td><td><span class="status-pill pending">In Progress</span></td></tr>
+                                <tr><td>HTML & CSS Basics</td><td>Ava Chen</td><td>100%</td><td><span class="status-pill active">Completed</span></td></tr>
+                                <tr><td>Figma Essentials</td><td>Sophia Thompson</td><td>100%</td><td><span class="status-pill active">Completed</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== PROGRESS TAB ===================== -->
+            <section class="tab-content" data-tab-panel="progress">
+                <div class="stat-row cols-3">
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-clock"></i></div><span class="dstat-trend">+6h</span></div><div class="num">42h</div><div class="lbl">Total Hours</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-fire"></i></div><span class="dstat-trend">+2</span></div><div class="num">12</div><div class="lbl">Day Streak</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-list-check"></i></div></div><div class="num">86</div><div class="lbl">Lessons Done</div></div>
+                </div>
+
+                <div class="panel" style="margin-bottom:20px;">
+                    <div class="panel-head"><h3>Weekly learning hours</h3></div>
+                    <div class="chart-box"><canvas id="chartProgressLine"></canvas></div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-head"><h3>Course progress</h3></div>
+                    <div class="mini-course">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=200&q=80" alt="">
+                        <div class="info"><h4>UX Design Fundamentals</h4><div class="progress-track"><div class="fill" style="width:72%"></div></div><span class="pct">72% complete</span></div>
+                    </div>
+                    <div class="mini-course">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=200&q=80" alt="">
+                        <div class="info"><h4>Advanced JavaScript</h4><div class="progress-track"><div class="fill" style="width:45%"></div></div><span class="pct">45% complete</span></div>
+                    </div>
+                    <div class="mini-course">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&q=80" alt="">
+                        <div class="info"><h4>Data Science Bootcamp</h4><div class="progress-track"><div class="fill" style="width:20%"></div></div><span class="pct">20% complete</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== CERTIFICATES TAB ===================== -->
+            <section class="tab-content" data-tab-panel="certificates">
+                <div class="stat-row cols-3">
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-award"></i></div><span class="dstat-trend">+1</span></div><div class="num">3</div><div class="lbl">Earned</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-regular fa-clock"></i></div></div><div class="num">1</div><div class="lbl">In Progress</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-share-nodes"></i></div></div><div class="num">2</div><div class="lbl">Shared</div></div>
+                </div>
+
+                <div class="panel" style="margin-bottom:20px;">
+                    <div class="panel-head"><h3>Certificates earned over time</h3></div>
+                    <div class="chart-box"><canvas id="chartCertBar"></canvas></div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-head"><h3>Your certificates</h3><a href="./404.html">See all</a></div>
+                    <div class="cert-grid">
+                        <div class="cert-card"><i class="fa-solid fa-award"></i><h4>HTML & CSS Basics</h4><span>Issued May 2026</span></div>
+                        <div class="cert-card"><i class="fa-solid fa-award"></i><h4>Intro to Product</h4><span>Issued Mar 2026</span></div>
+                        <div class="cert-card"><i class="fa-solid fa-award"></i><h4>Figma Essentials</h4><span>Issued Jan 2026</span></div>
+                        <div class="cert-card" style="opacity:.5;"><i class="fa-regular fa-clock"></i><h4>UX Design</h4><span>In progress</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== MESSAGES TAB ===================== -->
+            <section class="tab-content" data-tab-panel="messages">
+                <div class="stat-row cols-3">
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-regular fa-envelope"></i></div></div><div class="num">3</div><div class="lbl">Unread</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-regular fa-comments"></i></div></div><div class="num">18</div><div class="lbl">Conversations</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-regular fa-clock"></i></div></div><div class="num">2h</div><div class="lbl">Avg. Response</div></div>
+                </div>
+
+                <div class="dash-grid even">
+                    <div class="panel">
+                        <div class="panel-head"><h3>Inbox</h3><a href="./404.html">Mark all read</a></div>
+                        <div class="msg-list">
+                            <div class="msg-item unread"><img src="https://randomuser.me/api/portraits/women/58.jpg" alt=""><div class="info"><strong>Aisha Khan</strong><p>Great work on your last assignment!</p></div><time>2h</time></div>
+                            <div class="msg-item unread"><img src="https://randomuser.me/api/portraits/men/22.jpg" alt=""><div class="info"><strong>James Park</strong><p>Reminder: new module is live today.</p></div><time>5h</time></div>
+                            <div class="msg-item unread"><img src="https://randomuser.me/api/portraits/men/76.jpg" alt=""><div class="info"><strong>Leo Martins</strong><p>Your project feedback is ready.</p></div><time>1d</time></div>
+                            <div class="msg-item"><img src="https://randomuser.me/api/portraits/women/65.jpg" alt=""><div class="info"><strong>Sophia Thompson</strong><p>Thanks for joining the live session.</p></div><time>3d</time></div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-head"><h3>Quick contacts</h3></div>
+                        <div class="msg-list">
+                            <div class="msg-item"><img src="https://randomuser.me/api/portraits/women/58.jpg" alt=""><div class="info"><strong>Aisha Khan</strong><p>UX Design instructor</p></div></div>
+                            <div class="msg-item"><img src="https://randomuser.me/api/portraits/men/22.jpg" alt=""><div class="info"><strong>James Park</strong><p>JavaScript instructor</p></div></div>
+                            <div class="msg-item"><img src="https://randomuser.me/api/portraits/men/76.jpg" alt=""><div class="info"><strong>Leo Martins</strong><p>Data Science instructor</p></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== SETTINGS TAB ===================== -->
+            <section class="tab-content" data-tab-panel="settings">
+                <div class="dash-grid even">
+                    <div class="panel">
+                        <div class="panel-head"><h3>Profile</h3></div>
+                        <div class="form-group" style="margin-bottom:14px;"><label>Full Name</label><input type="text" value="Priya Sharma"></div>
+                        <div class="form-group" style="margin-bottom:14px;"><label>Email Address</label><input type="email" value="priya.sharma@stackly.com"></div>
+                        <div class="form-group" style="margin-bottom:0;"><label>Role</label><input type="text" value="Student" disabled></div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-head"><h3>Notifications</h3></div>
+                        <div class="settings-row"><div><h4>Course reminders</h4><p>Nudges to keep your streak going.</p></div><label class="switch"><input type="checkbox" checked><span class="track"></span></label></div>
+                        <div class="settings-row"><div><h4>New messages</h4><p>Get notified for instructor replies.</p></div><label class="switch"><input type="checkbox" checked><span class="track"></span></label></div>
+                        <div class="settings-row"><div><h4>Marketing emails</h4><p>Product news and tips.</p></div><label class="switch"><input type="checkbox"><span class="track"></span></label></div>
+                    </div>
+                </div>
+                <div class="panel" style="margin-top:20px;">
+                    <div class="panel-head"><h3>Security</h3></div>
+                    <div class="form-row" style="margin-bottom:16px;">
+                        <div class="form-group"><label>Current Password</label><input type="password" placeholder="••••••••"></div>
+                        <div class="form-group"><label>New Password</label><input type="password" placeholder="••••••••"></div>
+                    </div>
+                    <div class="settings-row" style="border-top:1px solid var(--border); padding-top:16px;"><div><h4>Two-factor authentication</h4><p>Add an extra layer of security.</p></div><label class="switch"><input type="checkbox"><span class="track"></span></label></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+        (function () {
+            if (typeof Chart === 'undefined') {
+                console.error('Chart.js failed to load — charts will not render.');
+                window.onTabActivate = function () {};
+                return;
+            }
+            var inited = {};
+            Chart.defaults.color = '#a1a0ab';
+            Chart.defaults.font.family = "'Inter', sans-serif";
+            Chart.defaults.plugins.legend.display = false;
+
+            var gridColor = 'rgba(255,255,255,.06)';
+            var purple = '#8b5cf6', purpleLight = '#a78bfa', purpleDark = '#3c1090';
+
+            function lineOpts() {
+                return {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { x: { grid: { display: false } }, y: { grid: { color: gridColor }, beginAtZero: true } },
+                    plugins: { tooltip: { backgroundColor: '#151020', borderColor: 'rgba(255,255,255,.1)', borderWidth: 1 } }
+                };
+            }
+            function barOpts() {
+                return {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { x: { grid: { display: false } }, y: { grid: { color: gridColor }, beginAtZero: true } },
+                    plugins: { tooltip: { backgroundColor: '#151020', borderColor: 'rgba(255,255,255,.1)', borderWidth: 1 } }
+                };
+            }
+            function makeGradient(ctx, color) {
+                var g = ctx.createLinearGradient(0, 0, 0, 220);
+                g.addColorStop(0, color + 'aa');
+                g.addColorStop(1, color + '05');
+                return g;
+            }
+
+            function initDashboardCharts() {
+                if (inited.dashboard) return; inited.dashboard = true;
+                var c1 = document.getElementById('chartHoursLine').getContext('2d');
+                new Chart(c1, {
+                    type: 'line',
+                    data: {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        datasets: [{ label: 'Hours', data: [1.5, 2, 1, 3, 2.5, .5, 1], borderColor: purple, backgroundColor: makeGradient(c1, purple), fill: true, tension: .4, pointBackgroundColor: purple, pointRadius: 4 }]
+                    },
+                    options: lineOpts()
+                });
+                var c2 = document.getElementById('chartStatusDoughnut').getContext('2d');
+                new Chart(c2, {
+                    type: 'doughnut',
+                    data: { labels: ['Completed', 'In progress', 'Not started'], datasets: [{ data: [3, 3, 2], backgroundColor: [purple, purpleLight, purpleDark], borderWidth: 0 }] },
+                    options: { responsive: true, maintainAspectRatio: false, cutout: '68%' }
+                });
+            }
+
+            function initMyCoursesCharts() {
+                if (inited.mycourses) return; inited.mycourses = true;
+                var c = document.getElementById('chartMyCoursesBar').getContext('2d');
+                new Chart(c, {
+                    type: 'bar',
+                    data: { labels: ['Design', 'Development', 'Data', 'Business'], datasets: [{ data: [2, 2, 1, 1], backgroundColor: purple, borderRadius: 8, maxBarThickness: 40 }] },
+                    options: barOpts()
+                });
+            }
+
+            function initProgressCharts() {
+                if (inited.progress) return; inited.progress = true;
+                var c = document.getElementById('chartProgressLine').getContext('2d');
+                new Chart(c, {
+                    type: 'line',
+                    data: {
+                        labels: ['W1', 'W2', 'W3', 'W4', 'W5', 'W6'],
+                        datasets: [{ label: 'Hours', data: [4, 6, 5, 8, 9, 10], borderColor: purpleLight, backgroundColor: makeGradient(c, purpleLight), fill: true, tension: .4, pointBackgroundColor: purpleLight, pointRadius: 4 }]
+                    },
+                    options: lineOpts()
+                });
+            }
+
+            function initCertCharts() {
+                if (inited.certificates) return; inited.certificates = true;
+                var c = document.getElementById('chartCertBar').getContext('2d');
+                new Chart(c, {
+                    type: 'bar',
+                    data: { labels: ['Jan', 'Mar', 'May', 'Jul'], datasets: [{ data: [1, 1, 1, 0], backgroundColor: purple, borderRadius: 8, maxBarThickness: 40 }] },
+                    options: barOpts()
+                });
+            }
+
+            window.onTabActivate = function (tab) {
+                if (tab === 'dashboard') initDashboardCharts();
+                if (tab === 'mycourses') initMyCoursesCharts();
+                if (tab === 'progress') initProgressCharts();
+                if (tab === 'certificates') initCertCharts();
+            };
+        })();
+                const emailID = document.getElementById("userEmail");
+
+if (emailID) {
+    emailID.textContent = localStorage.getItem("userEmail") || "email@gmail.com";
+}
+    </script>
+</body>
+
+</html>

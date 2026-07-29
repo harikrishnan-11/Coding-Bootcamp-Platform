@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Stackly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="./home.html" class="logo">Stackly</a>
+            <ul class="nav-links">
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./courses.html">Courses</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html" class="active">Contact Us</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="./login.html" class="btn btn-outline" style="padding:12px 22px;">Login</a>
+                <a href="./signup.html" class="btn btn-primary">Get Started</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+        <div class="mobile-panel" id="mobilePanel">
+           
+            <a href="./home.html">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./courses.html">Courses</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./contact.html">Contact Us</a>
+            <a href="./login.html">Login</a>
+            <a href="./signup.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container page-header-inner">
+            <div>
+                <span class="eyebrow load-in">Get in Touch</span>
+                <h1 class="load-in d1">We'd Love to <span class="text-grad">Hear From You</span></h1>
+                <p class="lead load-in d2">Questions about a course, billing, or partnerships? Our team replies within one business day.</p>
+                <div class="breadcrumb load-in d3">
+                    <a href="./home.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Contact Us</span>
+                </div>
+            </div>
+            <div class="page-header-figure load-in d2">
+                <div class="ring"></div>
+                <div class="page-header-img-wrap">
+                    <img src="./src/images/image-1-compressed-3.webp" alt="Customer support team member">
+                    <div class="page-header-stat-chip"><i class="fa-solid fa-headset"></i><span>Avg. response</span> Under 24hrs</div>
+                </div>
+                <div class="float-badge b1"><i class="fa-solid fa-envelope"></i></div>
+                <div class="float-badge b2"><i class="fa-solid fa-phone"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT INFO CARDS -->
+    <section class="reveal">
+        <div class="container">
+            <div class="contact-info-grid reveal-stagger">
+                <div class="contact-info-card">
+                    <div class="feat-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <h4>Visit Us</h4>
+                    <p>221B Learning Lane, Coimbatore, Tamil Nadu, India</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="feat-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <h4>Email Us</h4>
+                    <p>support@stackly.com<br>partnerships@stackly.com</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="feat-icon"><i class="fa-solid fa-phone"></i></div>
+                    <h4>Call Us</h4>
+                    <p>+91 98765 43210<br>Mon–Sat, 9am–7pm IST</p>
+                </div>
+            </div>
+
+            <div class="contact-wrap">
+                <div class="contact-form-card">
+                    <span class="eyebrow">Send a Message</span>
+                    <h2>Let's Start a <span class="text-grad">Conversation</span></h2>
+                    <p style="color:var(--gray-400);margin:14px 0 30px;">Fill out the form and our team will get back to you within one business day.</p>
+<form id="contactForm" novalidate>
+
+    <div class="form-row">
+
+        <div class="form-group">
+            <label for="fname">Full Name</label>
+            <input id="fname" type="text" placeholder="Jordan Lee">
+            <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="femail">Email Address</label>
+            <input id="femail" type="email" placeholder="jordan@email.com">
+            <small class="error-msg"></small>
+        </div>
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group">
+            <label for="fphone">Phone Number</label>
+            <input id="fphone" type="tel" placeholder="+91 00000 00000">
+            <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="fsubject">Subject</label>
+
+            <select id="fsubject">
+                <option value="">Select a topic</option>
+                <option>Course Enquiry</option>
+                <option>Billing & Payments</option>
+                <option>Partnerships</option>
+                <option>Technical Support</option>
+                <option>Other</option>
+            </select>
+
+            <small class="error-msg"></small>
+        </div>
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group full">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" placeholder="Tell us how we can help..."></textarea>
+            <small class="error-msg"></small>
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+        Send Message
+        <i class="fa-solid fa-paper-plane"></i>
+    </button>
+
+    <p class="form-note">
+        By submitting, you agree to our
+        <a href="./404.html" style="color:var(--purple-400);">Privacy Policy</a>.
+    </p>
+
+</form>
+                </div>
+
+                <div class="contact-map">
+                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=76.9%2C10.9%2C77.1%2C11.1&layer=mapnik" title="Map"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ MINI -->
+    <section class="reveal">
+        <div class="container">
+            <div class="section-head" style="margin:0 auto 40px;text-align:center;max-width:600px;">
+                <span class="eyebrow">Quick Answers</span>
+                <h2>Before You <span class="text-grad">Reach Out</span></h2>
+            </div>
+            <div class="faq-list" style="max-width:800px;margin:0 auto;">
+                <div class="faq-item open">
+                    <div class="faq-q">How fast will I get a reply? <i class="fa-solid fa-circle-minus"></i></div>
+                    <div class="faq-a"><div class="faq-a-inner">Our team typically responds within one business day, often sooner during weekday hours.</div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Do you offer phone support? <i class="fa-solid fa-circle-plus"></i></div>
+                    <div class="faq-a"><div class="faq-a-inner">Yes, phone support is available Monday to Saturday, 9am–7pm IST at the number listed above.</div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Can I request a custom course? <i class="fa-solid fa-circle-plus"></i></div>
+                    <div class="faq-a"><div class="faq-a-inner">Absolutely — select "Course Enquiry" in the form above and describe what you're looking for.</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="reveal">
+        <div class="container">
+            <div class="footer-grid">
+                <div><a href="./home.html" class="logo">Stackly</a></div>
+                <div>
+                    <h5>Quick Links:</h5>
+                    <ul>
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./courses.html">Courses</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Features</h5>
+                    <ul>
+                        <li><a href="./404.html">Online Courses</a></li>
+                        <li><a href="./404.html">Interactive Lessons</a></li>
+                        <li><a href="./404.html">Expert Instructors</a></li>
+                        <li><a href="./404.html">Certification</a></li>
+                        <li><a href="./404.html">Mobile Friendly Access</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Resource</h5>
+                    <ul>
+                        <li><a href="./blog.html">Blog / Articles</a></li>
+                        <li><a href="./contact.html">Help Center (FAQ)</a></li>
+                        <li><a href="./404.html">Learning Guides</a></li>
+                        <li><a href="./404.html">Community Forum</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Social Media</h5>
+                    <ul class="social">
+                        <li><a href="./404.html"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="./404.html"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+                        <li><a href="./404.html"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="./404.html"><i class="fa-brands fa-telegram"></i> Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>Copyright © 2026 Stackly. All Rights Reserved.</span>
+                <div class="links"><a href="./404.html">Terms of Service</a><a href="./404.html">Privacy Policy</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animation.js"></script>
+    <script>
+        const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    clearErrors();
+
+    let valid = true;
+
+    const name = document.getElementById("fname");
+    const email = document.getElementById("femail");
+    const phone = document.getElementById("fphone");
+    const subject = document.getElementById("fsubject");
+    const message = document.getElementById("fmsg");
+
+const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in)$/i;
+    const phonePattern = /^[6-9]\d{9}$/;
+
+    // Name
+    if(name.value.trim() === ""){
+        showError(name,"Please enter your full name.");
+        valid = false;
+    }
+
+    // Email
+    if(email.value.trim() === ""){
+        showError(email,"Email is required.");
+        valid = false;
+    }
+    else if(!emailPattern.test(email.value.trim())){
+        showError(email," The Email Must ends with .in or .com.");
+        valid = false;
+    }
+
+    // Phone
+    if(phone.value.trim() === ""){
+        showError(phone,"Phone number is required.");
+        valid = false;
+    }
+    else if(!phonePattern.test(phone.value.trim())){
+        showError(phone,"Enter a valid 10-digit mobile number.");
+        valid = false;
+    }
+
+    // Subject
+    if(subject.value === ""){
+        showError(subject,"Please select a subject.");
+        valid = false;
+    }
+
+    // Message
+    if(message.value.trim() === ""){
+        showError(message,"Please enter your message.");
+        valid = false;
+    }
+
+    if(valid){
+
+      
+
+        form.reset();
+
+    }
+
+});
+
+function showError(input,message){
+
+    input.classList.add("error");
+
+    input.parentElement.querySelector(".error-msg").textContent = message;
+
+}
+
+function clearErrors(){
+
+    document.querySelectorAll(".error-msg").forEach(error=>{
+        error.textContent = "";
+    });
+
+    document.querySelectorAll("#contactForm input,#contactForm select,#contactForm textarea").forEach(field=>{
+        field.classList.remove("error");
+    });
+
+}
+    </script>
+</body>
+
+</html>

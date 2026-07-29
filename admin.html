@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard — Stackly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <div class="sidebar-overlay"></div>
+
+    <div class="dash-wrap">
+        <!-- SIDEBAR -->
+        <aside class="dash-sidebar">
+            <div class="dash-sidebar-head">
+                <a href="./home.html" class="logo">Stackly</a>
+                <button class="sidebar-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="dash-nav-label">Overview</div>
+            <nav class="dash-nav">
+                <a href="#" data-tab="dashboard" class="active"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                <a href="#" data-tab="courses"><i class="fa-solid fa-book"></i> Courses</a>
+                <a href="#" data-tab="students"><i class="fa-solid fa-user-graduate"></i> Students</a>
+                <a href="#" data-tab="instructors"><i class="fa-solid fa-chalkboard-user"></i> Instructors</a>
+            </nav>
+
+            <div class="dash-nav-label">Manage</div>
+            <nav class="dash-nav">
+                <a href="#" data-tab="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+
+            <div class="dash-sidebar-foot">
+                <div class="dash-user-chip">
+                    <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="">
+                    <div>
+                        <strong>Daniel Reyes</strong>
+                        <span>daniel.reyes@stackly.com</span>
+                    </div>
+                </div>
+                <a href="./login.html" class="dash-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="dash-main">
+            <div class="dash-topbar">
+                <div class="topbar-left">
+                    <button class="mobile-menu-btn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+                    <div>
+                        <h1 data-tab-title data-user-name="Daniel">Welcome back</h1>
+                        <p data-tab-desc>Here's what's happening across Stackly today.</p>
+                    </div>
+                </div>
+                <div class="dash-topbar-actions">
+                    <div class="dash-search">
+                        Admin:
+                    </div>
+                    <div class="dash-email-chip"><i class="fa-solid fa-envelope"></i> <span id="userEmail">daniel.reyes@stackly.com</span></div>
+              
+                </div>
+            </div>
+
+            <!-- ===================== DASHBOARD TAB ===================== -->
+            <section class="tab-content active" data-tab-panel="dashboard">
+                <div class="stat-row">
+                    <div class="dstat-card">
+                        <div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-user-graduate"></i></div><span class="dstat-trend">+8.2%</span></div>
+                        <div class="num">12,480</div>
+                        <div class="lbl">Total Students</div>
+                    </div>
+                    <div class="dstat-card">
+                        <div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-book"></i></div><span class="dstat-trend">+3.1%</span></div>
+                        <div class="num">342</div>
+                        <div class="lbl">Active Courses</div>
+                    </div>
+                    <div class="dstat-card">
+                        <div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-sack-dollar"></i></div><span class="dstat-trend">+14.6%</span></div>
+                        <div class="num">$86.2K</div>
+                        <div class="lbl">Monthly Revenue</div>
+                    </div>
+                    <div class="dstat-card">
+                        <div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-chalkboard-user"></i></div><span class="dstat-trend down">-1.4%</span></div>
+                        <div class="num">96</div>
+                        <div class="lbl">Instructors</div>
+                    </div>
+                </div>
+
+                <div class="dash-grid">
+                    <div class="panel">
+                        <div class="panel-head"><h3>Enrollments this week</h3><a href="#">View report</a></div>
+                        <div class="chart-box"><canvas id="chartEnrollmentLine"></canvas></div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-head"><h3>Revenue by source</h3></div>
+                        <div class="chart-box sm"><canvas id="chartRevenueDoughnut"></canvas></div>
+                        <div class="chart-legend">
+                            <span style="--dot:#8b5cf6">Courses</span>
+                            <span style="--dot:#a78bfa">Subscriptions</span>
+                            <span style="--dot:#3c1090">Certificates</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-head"><h3>Recent students</h3><a href="#">Manage students</a></div>
+                    <div class="table-scroll">
+                        <table class="dash-table">
+                            <thead><tr><th>Student</th><th>Course</th><th>Enrolled</th><th>Status</th></tr></thead>
+                            <tbody>
+                                <tr><td><div class="table-person"><img src="https://randomuser.me/api/portraits/women/32.jpg" alt="">Maria Gomez</div></td><td>UX Design Fundamentals</td><td>Jul 27, 2026</td><td><span class="status-pill active">Active</span></td></tr>
+                                <tr><td><div class="table-person"><img src="https://randomuser.me/api/portraits/men/22.jpg" alt="">James Park</div></td><td>Advanced JavaScript</td><td>Jul 26, 2026</td><td><span class="status-pill pending">Pending</span></td></tr>
+                                <tr><td><div class="table-person"><img src="https://randomuser.me/api/portraits/women/58.jpg" alt="">Aisha Khan</div></td><td>Data Science Bootcamp</td><td>Jul 24, 2026</td><td><span class="status-pill active">Active</span></td></tr>
+                                <tr><td><div class="table-person"><img src="https://randomuser.me/api/portraits/men/76.jpg" alt="">Leo Martins</div></td><td>Product Management 101</td><td>Jul 20, 2026</td><td><span class="status-pill inactive">Inactive</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== COURSES TAB ===================== -->
+            <section class="tab-content" data-tab-panel="courses">
+                <div class="stat-row cols-3">
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-book"></i></div><span class="dstat-trend">+12</span></div><div class="num">342</div><div class="lbl">Total Courses</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-circle-check"></i></div><span class="dstat-trend">+9</span></div><div class="num">298</div><div class="lbl">Published</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-regular fa-file-lines"></i></div><span class="dstat-trend down">-2</span></div><div class="num">44</div><div class="lbl">Drafts</div></div>
+                </div>
+
+                <div class="panel" style="margin-bottom:20px;">
+                    <div class="panel-head"><h3>Courses by category</h3></div>
+                    <div class="chart-box"><canvas id="chartCoursesBar"></canvas></div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-head"><h3>All courses</h3><a href="#">Add course</a></div>
+                    <div class="table-scroll">
+                        <table class="dash-table">
+                            <thead><tr><th>Course</th><th>Category</th><th>Students</th><th>Status</th></tr></thead>
+                            <tbody>
+                                <tr><td>UX Design Fundamentals</td><td>Design</td><td>2,140</td><td><span class="status-pill active">Published</span></td></tr>
+                                <tr><td>Advanced JavaScript</td><td>Development</td><td>3,402</td><td><span class="status-pill active">Published</span></td></tr>
+                                <tr><td>Data Science Bootcamp</td><td>Data</td><td>1,876</td><td><span class="status-pill active">Published</span></td></tr>
+                                <tr><td>Product Management 101</td><td>Business</td><td>980</td><td><span class="status-pill pending">In Review</span></td></tr>
+                                <tr><td>Motion Design with AE</td><td>Design</td><td>0</td><td><span class="status-pill inactive">Draft</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== STUDENTS TAB ===================== -->
+            <section class="tab-content" data-tab-panel="students">
+                <div class="stat-row cols-3">
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-user-graduate"></i></div><span class="dstat-trend">+8.2%</span></div><div class="num">12,480</div><div class="lbl">Total Students</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-user-plus"></i></div><span class="dstat-trend">+640</span></div><div class="num">640</div><div class="lbl">New This Month</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-bolt"></i></div><span class="dstat-trend">+5.4%</span></div><div class="num">9,120</div><div class="lbl">Active Learners</div></div>
+                </div>
+
+                <div class="panel" style="margin-bottom:20px;">
+                    <div class="panel-head"><h3>Student growth (6 months)</h3></div>
+                    <div class="chart-box"><canvas id="chartStudentsLine"></canvas></div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-head"><h3>All students</h3><a href="#">Export CSV</a></div>
+                    <div class="table-scroll">
+                        <table class="dash-table">
+                            <thead><tr><th>Student</th><th>Courses</th><th>Joined</th><th>Status</th></tr></thead>
+                            <tbody>
+                                <tr><td><div class="table-person"><img src="https://randomuser.me/api/portraits/women/32.jpg" alt="">Maria Gomez</div></td><td>3</td><td>Feb 2026</td><td><span class="status-pill active">Active</span></td></tr>
+                                <tr><td><div class="table-person"><img src="https://randomuser.me/api/portraits/men/22.jpg" alt="">James Park</div></td><td>1</td><td>Jun 2026</td><td><span class="status-pill pending">Pending</span></td></tr>
+                                <tr><td><div class="table-person"><img src="https://randomuser.me/api/portraits/women/58.jpg" alt="">Aisha Khan</div></td><td>5</td><td>Nov 2025</td><td><span class="status-pill active">Active</span></td></tr>
+                                <tr><td><div class="table-person"><img src="https://randomuser.me/api/portraits/men/76.jpg" alt="">Leo Martins</div></td><td>2</td><td>Sep 2025</td><td><span class="status-pill inactive">Inactive</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== INSTRUCTORS TAB ===================== -->
+            <section class="tab-content" data-tab-panel="instructors">
+                <div class="stat-row cols-3">
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-chalkboard-user"></i></div><span class="dstat-trend down">-1.4%</span></div><div class="num">96</div><div class="lbl">Total Instructors</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-star"></i></div><span class="dstat-trend">+0.2</span></div><div class="num">4.8</div><div class="lbl">Avg. Rating</div></div>
+                    <div class="dstat-card"><div class="dstat-top"><div class="dstat-icon"><i class="fa-solid fa-book"></i></div><span class="dstat-trend">+15</span></div><div class="num">342</div><div class="lbl">Courses Taught</div></div>
+                </div>
+
+                <div class="panel" style="margin-bottom:20px;">
+                    <div class="panel-head"><h3>Top instructors by students</h3></div>
+                    <div class="chart-box"><canvas id="chartInstructorsBar"></canvas></div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-head"><h3>Instructor directory</h3><a href="#">Invite instructor</a></div>
+                    <div class="instructor-grid">
+                        <div class="instructor-card"><img src="https://randomuser.me/api/portraits/men/22.jpg" alt=""><h4>James Park</h4><span>Development</span><span class="status-pill active">4.9 ★</span></div>
+                        <div class="instructor-card"><img src="https://randomuser.me/api/portraits/women/58.jpg" alt=""><h4>Aisha Khan</h4><span>Design</span><span class="status-pill active">4.8 ★</span></div>
+                        <div class="instructor-card"><img src="https://randomuser.me/api/portraits/men/76.jpg" alt=""><h4>Leo Martins</h4><span>Business</span><span class="status-pill active">4.7 ★</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== SETTINGS TAB ===================== -->
+            <section class="tab-content" data-tab-panel="settings">
+                <div class="dash-grid even">
+                    <div class="panel">
+                        <div class="panel-head"><h3>Profile</h3></div>
+                        <div class="form-group" style="margin-bottom:14px;"><label>Full Name</label><input type="text" value="Daniel Reyes"></div>
+                        <div class="form-group" style="margin-bottom:14px;"><label>Email Address</label><input type="email" value="daniel.reyes@stackly.com"></div>
+                        <div class="form-group" style="margin-bottom:0;"><label>Role</label><input type="text" value="Administrator" disabled></div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-head"><h3>Notifications</h3></div>
+                        <div class="settings-row"><div><h4>New enrollments</h4><p>Get notified when a student enrolls.</p></div><label class="switch"><input type="checkbox" checked><span class="track"></span></label></div>
+                        <div class="settings-row"><div><h4>Weekly summary</h4><p>A digest of platform performance.</p></div><label class="switch"><input type="checkbox" checked><span class="track"></span></label></div>
+                        <div class="settings-row"><div><h4>Marketing emails</h4><p>Product news and tips.</p></div><label class="switch"><input type="checkbox"><span class="track"></span></label></div>
+                    </div>
+                </div>
+                <div class="panel" style="margin-top:20px;">
+                    <div class="panel-head"><h3>Security</h3></div>
+                    <div class="form-row" style="margin-bottom:16px;">
+                        <div class="form-group"><label>Current Password</label><input type="password" placeholder="••••••••"></div>
+                        <div class="form-group"><label>New Password</label><input type="password" placeholder="••••••••"></div>
+                    </div>
+                    <div class="settings-row" style="border-top:1px solid var(--border); padding-top:16px;"><div><h4>Two-factor authentication</h4><p>Add an extra layer of security.</p></div><label class="switch"><input type="checkbox"><span class="track"></span></label></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+        (function () {
+            if (typeof Chart === 'undefined') {
+                console.error('Chart.js failed to load — charts will not render.');
+                window.onTabActivate = function () {};
+                return;
+            }
+            var inited = {};
+            Chart.defaults.color = '#a1a0ab';
+            Chart.defaults.font.family = "'Inter', sans-serif";
+            Chart.defaults.plugins.legend.display = false;
+
+            var gridColor = 'rgba(255,255,255,.06)';
+            var purple = '#8b5cf6', purpleLight = '#a78bfa', purpleDark = '#3c1090';
+
+            function lineOpts() {
+                return {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: {
+                        x: { grid: { display: false } },
+                        y: { grid: { color: gridColor }, beginAtZero: true }
+                    },
+                    plugins: { tooltip: { backgroundColor: '#151020', borderColor: 'rgba(255,255,255,.1)', borderWidth: 1 } }
+                };
+            }
+            function barOpts() {
+                return {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: {
+                        x: { grid: { display: false } },
+                        y: { grid: { color: gridColor }, beginAtZero: true }
+                    },
+                    plugins: { tooltip: { backgroundColor: '#151020', borderColor: 'rgba(255,255,255,.1)', borderWidth: 1 } }
+                };
+            }
+
+            function makeGradient(ctx, color) {
+                var g = ctx.createLinearGradient(0, 0, 0, 220);
+                g.addColorStop(0, color + 'aa');
+                g.addColorStop(1, color + '05');
+                return g;
+            }
+
+            function initDashboardCharts() {
+                if (inited.dashboard) return; inited.dashboard = true;
+                var c1 = document.getElementById('chartEnrollmentLine').getContext('2d');
+                new Chart(c1, {
+                    type: 'line',
+                    data: {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        datasets: [{
+                            label: 'Enrollments', data: [55, 72, 40, 88, 65, 30, 22],
+                            borderColor: purple, backgroundColor: makeGradient(c1, purple),
+                            fill: true, tension: .4, pointBackgroundColor: purple, pointRadius: 4
+                        }]
+                    },
+                    options: lineOpts()
+                });
+                var c2 = document.getElementById('chartRevenueDoughnut').getContext('2d');
+                new Chart(c2, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Courses', 'Subscriptions', 'Certificates'],
+                        datasets: [{ data: [58, 30, 12], backgroundColor: [purple, purpleLight, purpleDark], borderWidth: 0 }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false, cutout: '68%' }
+                });
+            }
+
+            function initCoursesCharts() {
+                if (inited.courses) return; inited.courses = true;
+                var c = document.getElementById('chartCoursesBar').getContext('2d');
+                new Chart(c, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Design', 'Development', 'Data', 'Business', 'Marketing'],
+                        datasets: [{ data: [86, 124, 58, 44, 30], backgroundColor: purple, borderRadius: 8, maxBarThickness: 40 }]
+                    },
+                    options: barOpts()
+                });
+            }
+
+            function initStudentsCharts() {
+                if (inited.students) return; inited.students = true;
+                var c = document.getElementById('chartStudentsLine').getContext('2d');
+                new Chart(c, {
+                    type: 'line',
+                    data: {
+                        labels: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                        datasets: [{
+                            label: 'Students', data: [8200, 8900, 9600, 10500, 11400, 12480],
+                            borderColor: purpleLight, backgroundColor: makeGradient(c, purpleLight),
+                            fill: true, tension: .4, pointBackgroundColor: purpleLight, pointRadius: 4
+                        }]
+                    },
+                    options: lineOpts()
+                });
+            }
+
+            function initInstructorsCharts() {
+                if (inited.instructors) return; inited.instructors = true;
+                var c = document.getElementById('chartInstructorsBar').getContext('2d');
+                var opts = barOpts();
+                opts.indexAxis = 'y';
+                new Chart(c, {
+                    type: 'bar',
+                    data: {
+                        labels: ['James Park', 'Aisha Khan', 'Leo Martins', 'Sophia T.', 'Ava Chen'],
+                        datasets: [{ data: [3402, 2140, 1780, 1420, 980], backgroundColor: purple, borderRadius: 8, maxBarThickness: 36 }]
+                    },
+                    options: opts
+                });
+            }
+
+            window.onTabActivate = function (tab) {
+                if (tab === 'dashboard') initDashboardCharts();
+                if (tab === 'courses') initCoursesCharts();
+                if (tab === 'students') initStudentsCharts();
+                if (tab === 'instructors') initInstructorsCharts();
+            };
+        })();
+        const emailID = document.getElementById("userEmail");
+
+if (emailID) {
+    emailID.textContent = localStorage.getItem("userEmail") || "email@gmail.com";
+}
+    </script>
+</body>
+
+</html>

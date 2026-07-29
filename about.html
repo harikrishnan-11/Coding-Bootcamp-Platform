@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Stackly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="./home.html" class="logo">Stackly</a>
+            <ul class="nav-links">
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./about.html" class="active">About Us</a></li>
+                <li><a href="./courses.html">Courses</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="./login.html" class="btn btn-outline" style="padding:12px 22px;">Login</a>
+                <a href="./signup.html" class="btn btn-primary">Get Started</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+        <div class="mobile-panel" id="mobilePanel">
+          
+            <a href="./home.html">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./courses.html">Courses</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./contact.html">Contact Us</a>
+            <a href="./login.html">Login</a>
+            <a href="./signup.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container page-header-inner">
+            <div>
+                <span class="eyebrow load-in">About Stackly</span>
+                <h1 class="load-in d1">The Story Behind <span class="text-grad">Your Growth</span></h1>
+                <p class="lead load-in d2">We're a small team of educators and builders on a mission to make real, career-moving skills accessible to anyone, anywhere.</p>
+                <div class="breadcrumb load-in d3">
+                    <a href="./home.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>About Us</span>
+                </div>
+            </div>
+            <div class="page-header-figure load-in d2">
+                <div class="ring"></div>
+                <div class="page-header-img-wrap">
+                    <img src="./src/images/image-1-compressed.webp" alt="Stackly team working together">
+                    <div class="page-header-stat-chip"><i class="fa-solid fa-users"></i><span>Est. 2020</span> 12,500+ Learners</div>
+                </div>
+                <div class="float-badge b1"><i class="fa-solid fa-heart"></i></div>
+                <div class="float-badge b2"><i class="fa-solid fa-bolt"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <div class="container">
+        <div class="stats-strip reveal-stagger">
+            <div class="stat-card"><div class="num" data-count="12500" data-suffix="+">0</div><div class="lbl">Active Learners</div></div>
+            <div class="stat-card"><div class="num" data-count="340" data-suffix="+">0</div><div class="lbl">Courses Published</div></div>
+            <div class="stat-card"><div class="num" data-count="98" data-suffix="%">0</div><div class="lbl">Completion Rate</div></div>
+            <div class="stat-card"><div class="num" data-count="45" data-suffix="+">0</div><div class="lbl">Countries Reached</div></div>
+        </div>
+    </div>
+
+    <!-- STORY -->
+    <section class="reveal">
+        <div class="container story">
+            <div class="story-imgs">
+                <div class="story-img-main">
+                    <img src="./src/images/image-2-compressed.webp" alt="Team collaborating">
+                </div>
+                <div class="story-img-float">
+                    <img src="./src/images/image-3-compressed.webp" alt="Mentor helping student">
+                </div>
+            </div>
+            <div>
+                <span class="eyebrow">Our Story</span>
+                <h2>Built by Educators, Shaped by <span class="text-grad">Learners</span></h2>
+                <p style="color:var(--gray-400);margin-top:16px;">Stackly started in 2020 with a simple idea: skills
+                    shouldn't be locked behind rigid schedules or expensive institutions. What began as a handful of
+                    self-paced design courses has grown into a full learning platform trusted by thousands of career
+                    switchers, freelancers, and lifelong learners.</p>
+                <ul class="story-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Courses built and reviewed by working professionals, not just theorists</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Flexible, self-paced learning that fits around real life</li>
+                    <li><i class="fa-solid fa-circle-check"></i> A support community that shows up when you're stuck</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Certificates that actually mean something to employers</li>
+                </ul>
+                <a href="./courses.html" class="btn btn-primary" style="margin-top:32px;">Explore Courses <i class="fa-solid fa-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION / VALUES -->
+    <section class="reveal">
+        <div class="container">
+            <div class="section-head" style="margin:0 auto 48px;text-align:center;max-width:620px;">
+                <span class="eyebrow">Our Values</span>
+                <h2>What Drives Us <span class="text-grad">Forward</span></h2>
+                <p>Four principles guide every course, every feature, and every decision we make at Stackly.</p>
+            </div>
+            <div class="values-grid reveal-stagger">
+                <div class="value-card">
+                    <div class="feat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h4>Learner First</h4>
+                    <p>Every decision starts with what actually helps someone finish a course, not just start one.</p>
+                </div>
+                <div class="value-card">
+                    <div class="feat-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h4>Honest Quality</h4>
+                    <p>We review every course before publishing — no filler content, no recycled slides.</p>
+                </div>
+                <div class="value-card">
+                    <div class="feat-icon"><i class="fa-solid fa-people-group"></i></div>
+                    <h4>Real Community</h4>
+                    <p>Learning sticks when you're not doing it alone. Our forums are moderated by actual mentors.</p>
+                </div>
+                <div class="value-card">
+                    <div class="feat-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                    <h4>Always Improving</h4>
+                    <p>Courses get updated as industries change — you're never learning yesterday's tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="reveal">
+        <div class="container">
+            <div class="section-head" style="margin:0 auto 48px;text-align:center;max-width:620px;">
+                <span class="eyebrow">Our Team</span>
+                <h2>Meet the People Behind <span class="text-grad">Stackly</span></h2>
+                <p>A small, focused team of educators, engineers, and designers.</p>
+            </div>
+            <div class="team-grid reveal-stagger">
+                <div class="team-card">
+                    <div class="team-photo"><img src="" alt="Sarah Mitchell"></div>
+                    <div class="team-info">
+                        <h4>Sarah Mitchell</h4><span>Co-Founder &amp; CEO</span>
+                        <div class="team-social">
+                            <a href="./404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo"><img src="" alt="Liam Garcia"></div>
+                    <div class="team-info">
+                        <h4>Liam Garcia</h4><span>Head of Curriculum</span>
+                        <div class="team-social">
+                            <a href="./404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo"><img src="" alt="Emma Wilson"></div>
+                    <div class="team-info">
+                        <h4>Emma Wilson</h4><span>Lead Product Designer</span>
+                        <div class="team-social">
+                            <a href="./404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo"><img src="" alt="Noah Robinson"></div>
+                    <div class="team-info">
+                        <h4>Noah Robinson</h4><span>Engineering Lead</span>
+                        <div class="team-social">
+                            <a href="./404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta reveal" id="get-started">
+        <div class="container" style="position:relative;">
+            <span class="eyebrow">Join Us</span>
+            <h2>Ready to Learn Something <span class="text-grad">New Today?</span></h2>
+            <p>Join thousands of learners building better futures with flexible, self-paced learning.</p>
+            <div class="cta-btns">
+                <a href="./courses.html" class="btn btn-primary">Start Learning Now <i class="fa-solid fa-arrow-up-right"></i></a>
+                <a href="./contact.html" class="btn btn-outline">Talk to Us <i class="fa-solid fa-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="reveal">
+        <div class="container">
+            <div class="footer-grid">
+                <div><a href="./home.html" class="logo">Stackly</a></div>
+                <div>
+                    <h5>Quick Links:</h5>
+                    <ul>
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./courses.html">Courses</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Features</h5>
+                    <ul>
+                        <li><a href="./404.html">Online Courses</a></li>
+                        <li><a href="./404.html">Interactive Lessons</a></li>
+                        <li><a href="./404.html">Expert Instructors</a></li>
+                        <li><a href="./404.html">Certification</a></li>
+                        <li><a href="./404.html">Mobile Friendly Access</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Resource</h5>
+                    <ul>
+                        <li><a href="./blog.html">Blog / Articles</a></li>
+                        <li><a href="./contact.html">Help Center (FAQ)</a></li>
+                        <li><a href="./404.html">Learning Guides</a></li>
+                        <li><a href="./404.html">Community Forum</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Social Media</h5>
+                    <ul class="social">
+                        <li><a href="./404.html"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="./404.html"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+                        <li><a href="./404.html"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="./404.html"><i class="fa-brands fa-telegram"></i> Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>Copyright © 2026 Stackly. All Rights Reserved.</span>
+                <div class="links"><a href="./404.html">Terms of Service</a><a href="./404.html">Privacy Policy</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animation.js"></script>
+</body>
+
+</html>

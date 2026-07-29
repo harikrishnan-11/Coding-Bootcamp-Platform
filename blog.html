@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Stackly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="./home.html" class="logo">Stackly</a>
+            <ul class="nav-links">
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./courses.html">Courses</a></li>
+                <li><a href="./blog.html" class="active">Blog</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="./login.html" class="btn btn-outline" style="padding:12px 22px;">Login</a>
+                <a href="./signup.html" class="btn btn-primary">Get Started</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+        <div class="mobile-panel" id="mobilePanel">
+            
+            <a href="./home.html">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./courses.html">Courses</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./contact.html">Contact Us</a>
+            <a href="./login.html">Login</a>
+            <a href="./signup.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container page-header-inner">
+            <div>
+                <span class="eyebrow load-in">Our Blog</span>
+                <h1 class="load-in d1">Ideas, Guides &amp; <span class="text-grad">Learning Tips</span></h1>
+                <p class="lead load-in d2">Practical, no-fluff articles on studying smarter, building a portfolio, and switching careers with confidence.</p>
+                <div class="breadcrumb load-in d3">
+                    <a href="./home.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Blog</span>
+                </div>
+            </div>
+            <div class="page-header-figure load-in d2">
+                <div class="ring"></div>
+                <div class="page-header-img-wrap">
+                    <img src="./src/images/image-1-compressed-1.webp" alt="Person writing notes and studying">
+                    <div class="page-header-stat-chip"><i class="fa-solid fa-newspaper"></i><span>Updated weekly</span> 120+ Articles</div>
+                </div>
+                <div class="float-badge b1"><i class="fa-solid fa-pen"></i></div>
+                <div class="float-badge b2"><i class="fa-solid fa-comment"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED POST -->
+    <section class="reveal">
+        <div class="container">
+            <div class="blog-feature" style="display:grid;grid-template-columns:1fr 1fr;overflow:hidden;">
+                <div class="img" style="aspect-ratio:auto;">
+                    <img src="./src/images/image-2-compressed-1.webp" alt="">
+                    <div class="blog-tags"><span class="tag-pill">Online Learning</span><span class="tag-pill">Study Habits</span></div>
+                </div>
+                <div class="body" style="display:flex;flex-direction:column;justify-content:center;">
+                    <div class="meta-pills"><span class="meta-pill"><i class="fa-regular fa-user"></i> Sarah Mitchell</span><span class="meta-pill"><i class="fa-regular fa-calendar"></i> May 08, 2026</span></div>
+                    <h3 style="font-size:26px;">5 Simple Ways to Stay Motivated While Learning Online</h3>
+                    <p style="margin-top:12px;">Discover easy tips to keep your motivation high during your online learning journey, even when life gets busy and distractions pile up.</p>
+                    <a href="./404.html" class="read" style="display:inline-flex;gap:6px;align-items:center;margin-top:20px;font-weight:700;font-size:14px;text-decoration:underline;">Read Full Article <i class="fa-solid fa-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORY FILTER + GRID -->
+    <section class="reveal">
+        <div class="container">
+            <div class="filter-toolbar">
+                <button class="filter-chip active" data-filter="all">All Posts</button>
+                <button class="filter-chip" data-filter="learning">Online Learning</button>
+                <button class="filter-chip" data-filter="career">Career Growth</button>
+                <button class="filter-chip" data-filter="design">Design</button>
+                <button class="filter-chip" data-filter="dev">Development</button>
+            </div>
+
+            <div class="blog-card-grid">
+                <div class="blog-card" data-cat="learning">
+                    <div class="img"><img src="./src/images/image-3-compressed-1.webp" alt=""></div>
+                    <div class="body">
+                        <div class="meta-pills"><span class="meta-pill"><i class="fa-regular fa-calendar"></i> May 08, 2026</span></div>
+                        <h3>How to Create Effective Study Schedules for Online Courses</h3>
+                        <p>A practical framework for blocking time that actually sticks, even with a full-time job.</p>
+                        <a href="./404.html" class="read">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card" data-cat="learning">
+                    <div class="img"><img src="./src/images/image-2sa (2)-compressed.webp" alt=""></div>
+                    <div class="body">
+                        <div class="meta-pills"><span class="meta-pill"><i class="fa-regular fa-calendar"></i> May 06, 2026</span></div>
+                        <h3>Top 10 Online Resources for Self-Directed Learners</h3>
+                        <p>Curated tools and communities to keep learning momentum going outside of class.</p>
+                        <a href="./404.html" class="read">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card" data-cat="career">
+                    <div class="img"><img src="./src/images/image-12-compressed.webp" alt=""></div>
+                    <div class="body">
+                        <div class="meta-pills"><span class="meta-pill"><i class="fa-regular fa-calendar"></i> May 02, 2026</span></div>
+                        <h3>Balancing Work and Study: Tips for Busy Professionals</h3>
+                        <p>Realistic strategies for fitting a course around a demanding job.</p>
+                        <a href="./404.html" class="read">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card" data-cat="design">
+                    <div class="img"><img src="./src/images/image-16-compressed.webp" alt=""></div>
+                    <div class="body">
+                        <div class="meta-pills"><span class="meta-pill"><i class="fa-regular fa-calendar"></i> Apr 28, 2026</span></div>
+                        <h3>Building a Design Portfolio That Actually Gets Interviews</h3>
+                        <p>What hiring managers look for first, and what to leave out entirely.</p>
+                        <a href="./404.html" class="read">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card" data-cat="dev">
+                    <div class="img"><img src="./src/images/image-7-compressed.webp" alt=""></div>
+                    <div class="body">
+                        <div class="meta-pills"><span class="meta-pill"><i class="fa-regular fa-calendar"></i> Apr 21, 2026</span></div>
+                        <h3>From Zero to First Deploy: A Beginner Web Dev Roadmap</h3>
+                        <p>The exact order to learn HTML, CSS, and JavaScript without getting overwhelmed.</p>
+                        <a href="./404.html" class="read">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card" data-cat="career">
+                    <div class="img"><img src="./src/images/image-8-compressed.webp" alt=""></div>
+                    <div class="body">
+                        <div class="meta-pills"><span class="meta-pill"><i class="fa-regular fa-calendar"></i> Apr 14, 2026</span></div>
+                        <h3>Career Switching After 30: What Actually Works</h3>
+                        <p>Lessons from learners who changed industries using self-paced courses.</p>
+                        <a href="./404.html" class="read">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="./404.html" class="page-arrow"><i class="fa-solid fa-chevron-left"></i></a>
+                <a href="./404.html" class="page-num active">1</a>
+                <a href="./404.html" class="page-num">2</a>
+                <a href="./404.html" class="page-num">3</a>
+                <a href="./404.html" class="page-arrow"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="blog reveal">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Stay in the Loop</span>
+                <h2>Get Our Latest <span class="text-grad">Articles by Email</span></h2>
+                <p>One useful email a week. No spam, unsubscribe anytime.</p>
+            </div>
+            <div class="newsletter">
+                <input type="email" placeholder="Enter your email..">
+                <button class="btn btn-primary">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+       <footer id="contact" class="reveal">
+        <div class="container">
+            <div class="footer-grid">
+                <div><a href="./home.html" class="logo">Stackly</a></div>
+                <div>
+                    <h5>Quick Links:</h5>
+                    <ul>
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./courses.html">Courses</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Features</h5>
+                    <ul>
+                        <li><a href="./404.html">Online Courses</a></li>
+                        <li><a href="./404.html">Interactive Lessons</a></li>
+                        <li><a href="./404.html">Expert Instructors</a></li>
+                        <li><a href="./404.html">Certification</a></li>
+                        <li><a href="./404.html">Mobile Friendly Access</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Resource</h5>
+                    <ul>
+                        <li><a href="./blog.html">Blog / Articles</a></li>
+                        <li><a href="./contact.html">Help Center (FAQ)</a></li>
+                        <li><a href="./404.html">Learning Guides</a></li>
+                        <li><a href="./404.html">Community Forum</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Social Media</h5>
+                    <ul class="social">
+                        <li><a href="./404.html"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="./404.html"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+                        <li><a href="./404.html"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="./404.html"><i class="fa-brands fa-telegram"></i> Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>Copyright © 2026 Stackly. All Rights Reserved.</span>
+                <div class="links"><a href="./404.html">Terms of Service</a><a href="./404.html">Privacy Policy</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animation.js"></script>
+</body>
+
+</html>
