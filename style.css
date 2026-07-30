@@ -238,12 +238,16 @@ nav {
     display: flex;
     align-items: center;
     gap: 6px;
-    transition: .2s;
+    transition: .4s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--white);
+    background-color: var(--purple-600);
+    padding: 5px 10px;
+    border-radius: 10px;
+    
 }
 
 .nav-links .has-dd i {
@@ -1788,8 +1792,8 @@ footer {
     border-radius: var(--r-md);
     overflow: hidden;
     border: 6px solid var(--black);
-    bottom: -30px;
-    right: -30px;
+        bottom: 10px;
+    right: 10px;
     box-shadow: var(--shadow-purple);
 }
 
@@ -1922,7 +1926,114 @@ footer {
     background: var(--grad-purple);
     border-color: transparent;
 }
+/* ================================
+   Mobile Responsive (320px)
+================================ */
+@media (max-width: 320px) {
 
+    /* ---------- STATS ---------- */
+    .stats-strip {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 30px;
+    }
+
+    .stat-card {
+        padding: 22px 16px;
+    }
+
+    .stat-card .num {
+        font-size: 30px;
+    }
+
+    .stat-card .lbl {
+        font-size: 13px;
+    }
+
+    /* ---------- STORY ---------- */
+    .story {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-img-main {
+        aspect-ratio: 1/1.1;
+    }
+
+    .story-img-float {
+        width: 42%;
+        bottom: -15px;
+        right: 0;
+        border-width: 4px;
+    }
+
+    .story-list {
+        gap: 14px;
+        margin-top: 20px;
+    }
+
+    .story-list li {
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    /* ---------- VALUES ---------- */
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .value-card {
+        padding: 24px 18px;
+    }
+
+    .value-card h4 {
+        font-size: 16px;
+    }
+
+    .value-card p {
+        font-size: 13px;
+    }
+
+    /* ---------- TEAM ---------- */
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .team-photo {
+        aspect-ratio: 1/1;
+    }
+
+    .team-info {
+        padding: 18px 14px 22px;
+    }
+
+    .team-info h4 {
+        font-size: 16px;
+    }
+
+    .team-info span {
+        font-size: 12px;
+    }
+
+    .team-social {
+        gap: 8px;
+        margin-top: 14px;
+    }
+
+    .team-social a {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+}
+@media (max-width:320px){
+    .story-img-float{
+        right:10px;
+        bottom:10px;
+    }
+}
 /* ---------- COURSES PAGE: FILTER TOOLBAR ---------- */
 .filter-toolbar {
     display: flex;
@@ -2646,10 +2757,29 @@ footer {
 }
 
 @media (max-width:400px) {
+    .nav-actions .btn-outline{
+        display: none;
+    }
     .container {
         padding: 0 16px;
     }
 
+    .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    width: 150px;
+    height: 5%;
+}
+
+.logo img {
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+}
     .logo-row {
         gap: 28px;
     }
